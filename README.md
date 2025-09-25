@@ -21,7 +21,8 @@ Démontrer la capacité à programmer et à contrôler la qualité d'une applica
 
 Voir la documentation dans le code pour plus de détails
 
-### Aperçu du code
+### Aperçu des classes
+<img width="1146" height="828" alt="image" src="https://github.com/user-attachments/assets/25b4298f-2c33-4f9d-a308-2919a7255bd7" />
 
 
 
