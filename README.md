@@ -1,4 +1,4 @@
-# Examen 1 : Chez Tartine (10%)
+# Examen 1 : Jardin botanique (10%)
 
 ## Objectifs
 Démontrer la capacité à programmer et à contrôler la qualité d'une application console Windows.
@@ -33,7 +33,7 @@ Voir la documentation dans le code pour plus de détails
 	- les notes de cours personnelles téléversées
 	- les travaux inviduels et en équipe
 - Compléter l'application selon les instructions ci-dessous.
-- Faire un Fork de du projet GitHub de l'examen.
+- Faire une copie de du projet GitHub de l'examen.
 - Me donner les droits d'accèes à votre copie du projet dans GitHub (le faire avant de quitter la classe, le plus tôt possible).
 - Faire au moins un archivage (_commit_).
 - Me remettre le lien vers votre projet GitHub dans Classroom et marquer le travail comme terminé avant de quitter la classe.
@@ -43,7 +43,7 @@ Voir la documentation dans le code pour plus de détails
 - L’évaluation vaut pour 10% de la session et est notée sur 10 pts.
 
 ## Instructions
-1. Compléter la méthode Entretenir dans la classe Plante (voir les TODO).
+1. Compléter la méthode `Entretenir` dans la classe Plante (voir les TODO).
 2. Exécuter les tests unitaires fournis (il n'y a pas d'erreur dans les tests).
 3. Corriger le code pour que tous les tests unitaires fournis s'exécutent correctement; ajouter un **court** commentaire pour expliquer chaque problème et chaque correction.
 3. Compléter les tests (voir les TODO).
@@ -52,7 +52,7 @@ Voir la documentation dans le code pour plus de détails
 
 **Notes** : 
 - Les correctifs devraient modifier le moins possible le code fourni
-- Suggestion : Corriger d'abord les erreurs de la classe jardin et terminer avec le programme (`Program.cs`)
+- Suggestion : Corriger d'abord les erreurs de la classe `Jardin` et terminer avec le programme (`Program.cs`)
 - Pensez à me montrer ce que vous savez et ce que vous savez faire; n'hésitez pas à me laisser des commentaires dans le code
 
 ## Grille d'évaluation
