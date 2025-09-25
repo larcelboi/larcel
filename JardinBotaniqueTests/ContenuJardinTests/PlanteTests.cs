@@ -25,6 +25,7 @@ namespace JardinBotaniqueTests.ContenuJardinTests
 
             Assert.False(plante.EstVivante);
             Assert.Equal(0, plante.Croissance);
+
         }
 
         [Fact]
