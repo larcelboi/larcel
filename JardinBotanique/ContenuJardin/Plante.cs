@@ -1,6 +1,7 @@
 ﻿using JardinBotanique.Exceptions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,23 +69,59 @@ namespace JardinBotanique.ContenuJardin
         /// <exception cref="RessourcesInsuffisantesException"></exception>
         public void Entretenir(Ressources ressources, DateOnly date)
         {
-            if (!EstVivante) return;
+            bool arroser = false; // Savoir si l'arrosage de la plante a été fait
+            bool engrais = false; // Savoir si l'engrais de la plante a été fait
+
+            if (this.EstVivante == false) // Vérifie que la plante est morte
+                return;
+
+
+            if (ressources.Arroser(this.BesoinEauParJour)) //Vérifie que la plante peut être arroser
+            {
+                arroser = true;
+            }
+            else
+            {
+                joursSansEau += 1; // Sinon rajoute un jour sans eau
+
+            }
+            // Vérifier que la tolérence sans Eau n'a pas été dépacer
+            if (joursSansEau >= ToleranceSansEau)
+            {
+                EstVivante = false;
+                return;
+            }
+            else
+            {
+                EstVivante = true;
+            }
 
             // TODO: Comopléter selon la documentation de la méthode.
 
             TimeSpan nbJoursDepuisDernierEngrais = date.ToDateTime(TimeOnly.MinValue) - dateDernierEngrais.ToDateTime(TimeOnly.MinValue);
-
+            
             if (nbJoursDepuisDernierEngrais.TotalDays >= FrequenceEngrais)
             {
+
                 if (ressources.UtiliserEngrais(1))
                 {
                     Croissance += 2;
                     dateDernierEngrais = date;
+                    engrais = true;
+
                 }
                 else
                 {
                     throw new RessourcesInsuffisantesException("Pas assez d'engrais pour planter une nouvelle plante.");
                 }
+
+                if (arroser && engrais){
+                    Croissance += 1;
+
+                }
+
+
+
             }
         }
 

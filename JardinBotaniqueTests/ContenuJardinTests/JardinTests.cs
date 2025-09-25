@@ -47,7 +47,11 @@ namespace JardinBotaniqueTests.ContenuJardinTests
             Plante rosier = new Plante("Rose", TypePlante.Fleur, besoinEau: 2, frequenceEngrais: 1);
 
             // TODO: Suppprimer la ligne suivante et compléter le test unitaire.
-            Assert.Fail();
+            jardin.Planter(rosier);
+            Assert.True(jardin.Plantes.Contains(rosier));
+            Assert.Equal(8, jardin.Ressources.Eau);
+            Assert.Equal(4, jardin.Ressources.Engrais);
+
         }
 
         [Fact]
@@ -58,7 +62,10 @@ namespace JardinBotaniqueTests.ContenuJardinTests
             Plante herbe = new Plante("Menthe", TypePlante.Herbe, besoinEau: 3, frequenceEngrais: 1);
 
             // TODO: Suppprimer la ligne suivante et compléter le test unitaire.
-            Assert.Fail();
+            jardin.Planter(herbe);
+            Assert.Equal(7,jardin.Ressources.Eau);
+            Assert.Equal(4, jardin.Ressources.Engrais);
+
         }
 
         [Fact]

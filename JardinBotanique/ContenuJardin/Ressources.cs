@@ -16,7 +16,7 @@ namespace JardinBotanique.ContenuJardin
         /// <summary>
         /// Quantité d'anglais disponible
         /// </summary>
-        public int Engrais { get; private set; }
+        public int Engrais { get; set; }
 
         public Ressources(int eau, int engrais)
         {
