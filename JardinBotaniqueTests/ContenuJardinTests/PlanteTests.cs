@@ -43,7 +43,7 @@ namespace JardinBotaniqueTests.ContenuJardinTests
         }
 
         [Fact]
-        public void Entretenir_AvecEngraisDisponible_AugmenteCroissanceDe3()
+        public void Entretenir_AvecEauEngraisDisponible_AugmenteCroissanceDe3()
         {
             Ressources ressources = new Ressources(eau: 10, engrais: 5);
             DateOnly date = new DateOnly(2025, 9, 25);

@@ -60,7 +60,6 @@ namespace JardinBotanique.ContenuJardin
         /// Entretiens la plante pour la journée spécifiée.
         /// Arrose la plante selon ses besoins en eau et suit le nombre de jours sans eau.
         /// La plante meurt si sa tolérance sans eau est dépassée.
-        /// Fait croître la plante si l'arrosage a été effectué.
         /// Applique de l'engrais lorsque nécessaire, selon la fréquence définie,
         /// et fait croître la plante si l'arrosage et l'engrais ont été fournis.
         /// </summary>
